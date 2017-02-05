@@ -1,7 +1,8 @@
-1.源配置
-sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup （备份当前的源列表，以便日後需要时恢复）
-vim /etc/apt/sources.list
+### 源配置
 ~~~
+#备份当前的源列表，以便日後需要时恢复
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup 
+vim /etc/apt/sources.list
 deb http://mirrors.163.com/ubuntu/ xenial main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ xenial-security main restricted universe multiverse
 deb http://mirrors.163.com/ubuntu/ xenial-updates main restricted universe multiverse
