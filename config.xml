@@ -24,9 +24,38 @@ sudo apt-get dist-upgrade
 修复安装
 sudo apt-get -f install
 
+[config dns]
+sudo su
+echo "nameserver *.*.*.*" > /etc/resolvconf/resolv.conf.d/base
+echo "nameserver *.*.*.*" > /etc/resolv.conf
+
+[当前用户代理]
+su bush
+vim ~/.bashrc
+export ftp_proxy=http://*.*.*.*:8080
+export http_proxy=http://*.*.*.*:8080
+export https_proxy=http://*.*.*.*:8080
+export all_proxy=http://*.*.*.*:8080
+export no_proxy=localhost,127.0.0.1
+
+[root用户代理]
+sudo su -
+vim ~/.bashrc同当前用户
+
+[apt代理]
+cat << EOF > /etc/apt/apt.conf
+Acquire::http::Proxy "http://*.*.*.*:8080";
+Acquire::http::Proxy::*.*.*.* "DIRECT";
+Acquire::http::Proxy::ftp.*.com "DIRECT";
+EOF
+
+[may remove software]
+sudo apt remove unity-webapps-common
+
 [flash install]
 Software Update->Other Software->Canonical Partners和Canonical Partners[Source Code]
 重新Reload
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install adobe-flashplugin
+
