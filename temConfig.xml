@@ -1,6 +1,0 @@
-[flash install]
-Software Update->Other Software->Canonical Partners和Canonical Partners[Source Code]
-重新Reload
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install adobe-flashplugin
