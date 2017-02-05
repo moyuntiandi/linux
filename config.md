@@ -15,4 +15,10 @@ deb-src http://mirrors.163.com/ubuntu/ xenial-backports main restricted universe
 #Canonical 合作伙伴和附加
 deb http://archive.canonical.com/ubuntu/ xenial partner
 deb http://extras.ubuntu.com/ubuntu/ xenial main
+#这一步是更新你的源列表，换源後必须执行
+sudo apt-get update
+#这一步是更新软件
+sudo apt-get dist-upgrade
+#修复安装
+sudo apt-get -f install
 ~~~
