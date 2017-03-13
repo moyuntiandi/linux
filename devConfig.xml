@@ -34,3 +34,14 @@ StartupNotify=true
 Type=Application
 Categories=Application;Development;
 创建其他图标一样,修改Exec和Icon两参数
+[git 冲突解决工具]
+sudo apt-get install meld
+git config --global merge.tool meld
+git config –-global diff.external ~/git-meld
+ln -s ~/git-diffall ~/bin/git-diffall
+git config --global alias.diffall ~/git-diffall
+[git-meld]
+#!/bin/sh
+meld $2 $5
+[git-diffall]
+https://github.com/thenigan/git-diffall
