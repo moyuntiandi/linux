@@ -41,3 +41,21 @@ fcitx无法开机自启动的问题
 此文件拷贝到:~/.config/autostart/
 如果没有autostart目录新建即可
 ******************************
+
+主题更换,切换为flatabulous扁平主题
+******************************
+1.添加资源
+sudo add-apt-repository ppa:noobslab/themes
+sudo add-apt-repository ppa:noobslab/icons
+如果添加报错,试着添加-E参数
+sudo -E add-apt-repository ppa:noobslab/icons
+sudo apt-get  update
+2.安装flatabulous窗口与图标主题
+sudo apt-get install arc-flatabulous-theme
+sudo apt-get install ultra-flat-icons
+3.安装unity-tweak-tools
+sudo apt-get install  unity-tweak-tools
+unity-tweak-tools
+设置“主题”为"Arc-flatabulous-dark"
+设置“图标”为"Ultra-flat"
+******************************
